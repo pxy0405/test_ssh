@@ -31,86 +31,6 @@
 </head>
 <body>
 <%@include file="menu.jsp" %>
-<%-- <div class="container productContent">
-		<div class="span6">
-			<div class="hotProductCategory">
-			<c:forEach items="${sessionScope.cList }" var="c">
-				<dl>
-					<dt>
-						<a href="${pageContext.request.contextPath}/product_findByCid.action?cid=${c.cid }&page=1">${c.cname }</a>
-					</dt>
-						<c:forEach items="${c.categorySeconds }" var="cs">
-							<dd>
-								<a href="${ pageContext.request.contextPath }/product_findByCsid.action?csid=${cs.csid }&page=1">${cs.csname }</a>
-							</dd>
-						</c:forEach>	
-				</dl>
-				</c:forEach>	
-			</div>
-			</div>
-		<div class="span18 last">
-			
-			<div class="productImage">
-					<a title="" style="outline-style: none; text-decoration: none;" id="zoom" href="" rel="gallery">
-						<div class="zoomPad">
-							<img style="opacity: 1;" title="" class="medium" src="${pageContext.request.contextPath}/${product.image}"/>
-						</div>
-					</a>
-			</div>
-			<div class="name">${product.pname}</div>
-			<div class="sn">
-			<dl>
-				<dd>编号：751</dd><dd>|</dd>
-				<dd>材质：${product.material }</dd><dd>|</dd>
-				<dd>品牌：${product.brand }</dd><dd>|</dd>
-			</dl>
-				
-			</div>
-			<div class="info">
-				<dl>
-					<dt>亿家价:</dt>
-					<dd>
-						<strong>${product.shop_price}</strong>
-							参 考 价：
-							<del>￥${product.market_price}元/份</del>
-					</dd>
-				</dl>
-					<dl>
-						<dt>促销:</dt>
-						<dd>
-								<a target="_blank" title="限时抢购 (2014-07-30 ~ 2015-01-01)">限时抢购</a>
-						</dd>
-					</dl>
-					<dl>
-						<dt>    </dt>
-						<dd>
-							<span>    </span>
-						</dd>
-					</dl>
-			</div>
-			<form id="cartForm" action="${ pageContext.request.contextPath }/cart_addCart.action" method="post" >
-				<input type="hidden" name="pid" value="${product.pid }"/>
-				<div class="action">
-						<dl class="quantity">
-							<dt>购买数量:</dt>
-							<dd>
-								<input id="count" name="count" value="1" maxlength="4" onpaste="return false;" type="text"/>
-								<div>
-									<span id="increase" class="increase">&nbsp;</span>
-									<span id="decrease" class="decrease">&nbsp;</span>
-								</div>
-							</dd>
-							<dd>
-								件
-							</dd>
-						</dl>
-					<div class="buy">
-							<input id="addCart" class="addCart" value="加入购物车" type="button" onclick="saveCart()"/>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div> --%>
 	
 	<div class="listMain">
 				<ol class="am-breadcrumb am-breadcrumb-slash">
@@ -286,6 +206,22 @@
 				<div class="action">
 						<dl class="quantity">
 							<dd>
+								颜色：
+							</dd>
+							<dd>
+								10#蜜橘色+17#樱花粉
+							</dd>
+						</dl>
+						<dl class="quantity">
+							<dd>
+								包装：
+							</dd>
+							<dd>
+								两支手袋装（送彩带）
+							</dd>
+						</dl>
+						<dl class="quantity">
+							<dd>
 								购买数量：<input id="count" name="count" value="1" maxlength="4" onpaste="return false;" type="text"/>件
 							</dd>
 						</dl>
@@ -326,6 +262,33 @@
 									<a class="s_pic" href="#"><img src="images/cp.jpg"/></a>
 								</div> <a class="txt" target="_blank" href="#">萨拉米 1+1小鸡腿</a>
 								<div class="info-box"> <span class="info-box-price">¥ 29.90</span> <span class="info-original-price">￥ 199.00</span> </div>
+							</li>
+							<li class="plus_icon"><i>+</i></li>
+							<li>
+								<div class="s_picBox">
+									<a class="s_pic" href="#"><img src="images/cp2.jpg"/></a>
+								</div> <a class="txt" target="_blank" href="#">ZEK 原味海苔</a>
+								<div class="info-box"> <span class="info-box-price">¥ 8.90</span> <span class="info-original-price">￥ 299.00</span> </div>
+							</li>
+							<li>
+								<div class="s_picBox">
+									<a class="s_pic" href="#"><img src="images/cp.jpg"/></a>
+								</div> <a class="txt" target="_blank" href="#">萨拉米 1+1小鸡腿</a>
+								<div class="info-box"> <span class="info-box-price">¥ 29.90</span> <span class="info-original-price">￥ 199.00</span> </div>
+							</li>
+							<li class="plus_icon"><i>+</i></li>
+							<li>
+								<div class="s_picBox">
+									<a class="s_pic" href="#"><img src="images/cp2.jpg"/></a>
+								</div> <a class="txt" target="_blank" href="#">ZEK 原味海苔</a>
+								<div class="info-box"> <span class="info-box-price">¥ 8.90</span> <span class="info-original-price">￥ 299.00</span> </div>
+							</li>
+							<li class="plus_icon"><i>+</i></li>
+							<li>
+								<div class="s_picBox">
+									<a class="s_pic" href="#"><img src="images/cp2.jpg"/></a>
+								</div> <a class="txt" target="_blank" href="#">ZEK 原味海苔</a>
+								<div class="info-box"> <span class="info-box-price">¥ 8.90</span> <span class="info-original-price">￥ 299.00</span> </div>
 							</li>
 							<li class="plus_icon"><i>+</i></li>
 							<li>

@@ -12,106 +12,59 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.animate-colors-min.js"></script>
 <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
-<link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet" type="text/css"/>
-<script >
-function change(){
-	var img1 = document.getElementById("checkImg");
-	img1.src="${pageContext.request.contextPath}/checkImg.action?"+new Date().getTime();
-}
-</script>
-
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/amazeui.css" />
+<link href="${pageContext.request.contextPath}/css/dlstyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <%@include file="menu.jsp" %>
-	<div class="container login">
-		<div class="span12">
-<div class="ad">
-					<img src="${pageContext.request.contextPath}/img/login.jpg" width="500" height="330" alt="会员登录" title="会员登录">
-</div>		</div>
-		<div class="span12 last">
-			<div class="wrap">
-				<div class="main">
-					<div class="title">
-						<strong>会员登录</strong>USER LOGIN 
-					</div>
-					<form id="loginForm" action="User_userLogin.action"  method="post" novalidate="novalidate">
-						<table>
-							<tbody><tr>
-								<th>
-										用户名/E-mail:
-								</th>
-								<td>
-									<input type="text" id="username" name="user.userName" class="text" maxlength="20">
-									
-								</td>
-							</tr>
-							<tr>
-								<th>
-									密&nbsp;&nbsp;码:
-								</th>
-								<td>
-									<input type="password" id="password" name="user.passWord" class="text" maxlength="20" autocomplete="off">
-								</td>
-							</tr>
-							<tr>
-								<th>
-									状&nbsp;&nbsp;态:
-								</th>
-								<td>
-									<input type="text" id="status" name="user.status" class="text" maxlength="20">
-								</td>
-							</tr>
-								<tr>
-									<th>
-										验证码:
-									</th>
-									<td>
-										<span class="fieldSet">
-											<input type="text" id="checkcode" name="checkcode" class="text captcha" maxlength="4" autocomplete="off"><img id="checkImg" class="captchaImage" src="${pageContext.request.contextPath}/checkImg.action" onclick="change()" title="点击更换验证码"/>
-										</span>
-									</td>
-								</tr>
-							<tr>
-								<th>&nbsp;
-									
-								</th>
-								<td>
-									<label>
-										<input type="checkbox" id="isRememberUsername" name="isRememberUsername" value="true">记住用户名
-									</label>
-									<label>
-										&nbsp;&nbsp;<a >找回密码</a>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<th>&nbsp;
-									
-								</th>
-								<td>
-									<input type="submit" class="submit" value="登 录">
-								</td>
-							</tr>
-							<tr class="register">
-								<th>&nbsp;
-									
-								</th>
-								<td>
-									<dl>
-										<dt>还没有注册账号？</dt>
-										<dd>
-											立即注册即可体验在线购物！
-											<a href="${pageContext.request.contextPath}/会员注册.htm">立即注册</a>
-										</dd>
-									</dl>
-								</td>
-							</tr>
-						</tbody></table>
-					</form>
+		<div class="login-banner">
+			<div class="login-main">
+				<div class="login-banner-bg"><span></span><img src="${pageContext.request.contextPath}/images/big.jpg" /></div>
+				<div class="login-box">
+
+							<h3 class="title">登录商城</h3>
+
+							<div class="clear"></div>
+						
+						<div class="login-form">
+						 <form id="loginForm" action="User_userLogin.action"  method="post" novalidate="novalidate">
+							   <div class="user-name">
+								    <label for="user">姓名</label>
+								    <input type="text" id="username" name="user.userName" placeholder="邮箱/手机/用户名"/>
+				                 </div>
+				                 <div class="user-pass">
+								    <label for="password">密码</label>
+								    <input type="password" id="password" name="user.passWord" placeholder="请输入密码"/>
+                 				</div>
+                 				<div class="user-name">
+								    <label for="user">身份</label>
+								    <input type="text" id="status" name="user.status" placeholder="普通用户请输入1"/>
+				                 </div>
+				                 <!-- <div class="login-links">
+					                <label for="remember-me"><input id="remember-me" type="checkbox"/>记住密码</label>
+													<a href="#" class="am-fr">忘记密码</a>
+					            </div> -->
+								<div class="am-cf">
+									<input type="submit" value="登 录" class="am-btn am-btn-primary am-btn-sm"/>
+								</div>
+			              </form>
+			           </div>
+            
+					            
+						<div class="partner">		
+								<h3>合作账号</h3>
+								<h3>&nbsp;&nbsp;</h3>
+							<div class="am-btn-group">
+								<li><a href="#"><span>QQ登录</span></a></li>
+								<li><a href="#"><span>微博登录</span> </a></li>
+								<li><a href="#"><span>微信登录</span> </a></li>
+							</div>
+						</div>	
+
 				</div>
 			</div>
 		</div>
-	</div>
+
 <div class="container footer">
 	<div class="span24">
 	  <div class="footerAd"><img src="${pageContext.request.contextPath}/img/footer.jpg" width="950" height="52" alt="我们的优势" title="我们的优势" /></div>	

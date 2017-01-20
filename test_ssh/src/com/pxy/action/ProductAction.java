@@ -131,7 +131,16 @@ public class ProductAction extends SuperAction{
 			product = productService.findByPid(pid);
 			return "findByPid";
 		}
-
+		// 根据二级分类id查询商品:
+		public String findByCsid() {
+			// 根据二级分类查询商品
+			List<Product> pageBean = productService.findByPageCsid(csid, page);
+			// 将PageBean存入到值栈中:
+			//ActionContext.getContext().getValueStack().set("pageBean", pageBean);
+			// 将PageBean存入session
+			session.setAttribute("pageBean", pageBean);
+			return "findByCsid";
+		}
 		// 根据分类的id查询商品:
 		public String findByCid() {
 			// List<Category> cList = categoryService.findAll();

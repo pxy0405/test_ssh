@@ -59,9 +59,6 @@
 				</dl>
 				<div class="total" style="text-align:right">
 					<em id="promotion"></em>
-							<em style="color:#ff6600">
-								登录后确认是否享有优惠
-							</em>&nbsp;&nbsp;
 					赠送积分: <em id="effectivePoint" style="color:#ff6600">${session.cart.total }</em>&nbsp;&nbsp;
 					商品金额: <strong id="effectivePrice" style="color:#ff6600">￥${session.cart.total }元</strong>
 				</div>
