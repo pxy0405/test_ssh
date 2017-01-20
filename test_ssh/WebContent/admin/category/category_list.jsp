@@ -33,7 +33,7 @@
           <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
             <h5>一级目录列表</h5>
             <a href="category_add.action">添加一级分类</a>
-            <a href="category_putOut.action">导出为Excel列表</a>
+            <a href="category_export.action">导出为Excel列表</a>
           </div>
           <div class="widget-content nopadding">
             <table class="table table-bordered data-table">

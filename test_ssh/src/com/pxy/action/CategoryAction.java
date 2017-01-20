@@ -1,10 +1,17 @@
 package com.pxy.action;
 
+import java.sql.ResultSet;
 import java.util.List;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.pxy.model.Category;
 import com.pxy.service.CategoryService;
+import com.pxy.utils.ExcelUtil;
+import com.pxy.utils.ResponseUtil;
 
 public class CategoryAction  extends SuperAction{
 		private Category category;
@@ -69,7 +76,12 @@ public class CategoryAction  extends SuperAction{
 		}
 		
 		//后台：导出一级分类为Excel列表
-		public String putOut(){
-			return "putOutSuccess";
+		public String export() throws Exception{
+			Workbook wb=new HSSFWorkbook();
+			String headers[]={"cid","cname"};
+			List<Category> rs=categoryService.findAll();
+			ExcelUtil.fillExcelData(rs, wb, headers);
+			ResponseUtil.export(ServletActionContext.getResponse(), wb, "导出excel.xls");
+			return null;
 		}
 }

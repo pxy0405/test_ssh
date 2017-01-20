@@ -92,7 +92,6 @@
 			<result name="deleteSuccess" type="redirectAction">category_adminFindAll</result>
 			<result name="updateSuccess" type="redirectAction">category_adminFindAll</result>
 			<result name="editSuccess">/admin/category/category_edit.jsp</result>
-			
 			<interceptor-ref name="loginInterceptor">
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"></interceptor-ref>

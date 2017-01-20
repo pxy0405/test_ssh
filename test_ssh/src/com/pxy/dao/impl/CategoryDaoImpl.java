@@ -1,5 +1,6 @@
 package com.pxy.dao.impl;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -56,6 +57,15 @@ public class CategoryDaoImpl implements CategoryDao{
 		public void update(Category category) {
 			Session session = sessionFactory.getCurrentSession();
 	        session.update(category); 
+		}
+
+		@Override
+		public ResultSet findAllCategory() {
+			Session session = sessionFactory.getCurrentSession();
+			String hql="from Category";
+			Query query =session.createQuery(hql);
+			List<Category> categoryList = query.list();
+			return null;
 		}
 		
 }

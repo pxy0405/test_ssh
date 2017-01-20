@@ -3,10 +3,7 @@ package com.pxy.action;
 import java.io.ByteArrayInputStream;
 import java.util.List;
 import java.io.InputStream;
-
-
-
-
+import org.apache.commons.codec.digest.DigestUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -62,6 +59,8 @@ public class UserAction extends SuperAction{
 		this.user = user;
 	}
 	public String userLogin(){
+		String md5Digest = DigestUtils.md5Hex(user.getPassWord());
+		user.setPassWord(md5Digest);
 		if(userService.login(user)!=null){
 			if(user.getStatus().equals("0")){
 				users=userService.list();
@@ -99,6 +98,8 @@ public class UserAction extends SuperAction{
 					this.addActionError("验证码输入错误!");
 					return "checkcodeFail";
 				}
+				String md5Digest = DigestUtils.md5Hex(user.getPassWord());
+				user.setPassWord(md5Digest);
 		userService.register(user);
 		return "register_success";
 	}

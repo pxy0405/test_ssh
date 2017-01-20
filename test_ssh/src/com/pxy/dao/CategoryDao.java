@@ -1,5 +1,6 @@
 package com.pxy.dao;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import com.pxy.model.Category;
@@ -15,5 +16,7 @@ public interface CategoryDao {
 	Category findByCid(Integer cid);
 
 	void update(Category category);
+
+	ResultSet findAllCategory();
 
 }

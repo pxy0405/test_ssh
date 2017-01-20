@@ -5,13 +5,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
-
-
-
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;

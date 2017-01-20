@@ -1,5 +1,6 @@
 package com.pxy.service;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import com.pxy.model.Category;
@@ -14,5 +15,7 @@ public interface CategoryService {
 	Category findByCid(Integer cid);
 
 	void update(Category category);
+
+	ResultSet findAllCategory();
 
 }

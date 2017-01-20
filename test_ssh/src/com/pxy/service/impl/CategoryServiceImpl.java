@@ -1,5 +1,6 @@
 package com.pxy.service.impl;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import com.pxy.dao.CategoryDao;
@@ -37,6 +38,12 @@ public class CategoryServiceImpl implements CategoryService{
 		// 业务层修改一级分类
 		public void update(Category category) {
 			categoryDao.update(category);
+		}
+
+		@Override
+		public ResultSet findAllCategory() {
+			// TODO Auto-generated method stub
+			return categoryDao.findAllCategory();
 		}
 
 		

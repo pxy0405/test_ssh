@@ -36,5 +36,11 @@ public class Category implements Serializable{
 	public void setCategorySeconds(Set<CategorySecond> categorySeconds) {
 		this.categorySeconds = categorySeconds;
 	}
+	@Override
+	public String toString() {
+		return "Category [cid=" + cid + ", cname=" + cname + "]";
+	}
+	
+	
 	
 }
